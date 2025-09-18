@@ -1,0 +1,38 @@
+div.iphone-mockup {
+  position: relative;
+  max-width: 350px;
+  margin: 20px;
+}
+
+.iphone-mockup img.device {
+  width: 100%;
+  height: auto;
+}
+
+.iphone-mockup .screen {
+  position: absolute;
+  width: 88%;
+  height: 77%;
+  top: 12%;
+  border-radius: 2px;
+  left: 6%;
+  border: 1px solid #444;
+  background-color: #aaa;
+  overflow: hidden;
+  background: url(../../../assets/img/g4bebde999935c68a3c0136dbafdfaef46b5284bbd8647a1a668ca1c9b0a94089718261a4189d0f07f971517c9aa44be6a0bb29f0154b793b594858b2c6a47d74_640.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.iphone-mockup .screen:before {
+  content: '';
+  background-color: #fff;
+  position: absolute;
+  width: 70%;
+  height: 140%;
+  top: -12%;
+  right: -60%;
+  transform: rotate(-19deg);
+  opacity: 0.2;
+}
+

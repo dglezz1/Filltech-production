@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en" data-bss-forced-theme="light">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Soluciones Digitales Filltech</title>
+    <meta property="og:url" content="https://filltech-ai.com/ai.html">
+    <meta name="description" content="Páginas Web, Aplicaciones Web, Marketing, Consultoría, Inteligencia Artificial">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Actor&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Afacad&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Inscriptional+Pahlavi&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/Ionicons.css">
+    <link rel="stylesheet" href="assets/css/LineAwesome.css">
+    <link rel="stylesheet" href="assets/css/aos.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/css/aos.min.css">
+    <link rel="stylesheet" href="assets/css/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/css/Animation-Cards-_app.css">
+    <link rel="stylesheet" href="assets/css/css/Animation-Cards.css">
+    <link rel="stylesheet" href="assets/css/css/Banner-Heading-Image-images.css">
+    <link rel="stylesheet" href="assets/css/css/Bold-BS4-Cards-with-Hover-Effect-74-hover_effect_74.css">
+    <link rel="stylesheet" href="assets/css/css/Bold-BS4-Cards-with-Hover-Effect-74.css">
+    <link rel="stylesheet" href="assets/css/css/chrismas.compiled.css">
+    <link rel="stylesheet" href="assets/css/css/Features-Cards-icons.css">
+    <link rel="stylesheet" href="assets/css/css/Mockup-iPhone-6S--1.css">
+    <link rel="stylesheet" href="assets/css/css/Mockup-iPhone-6S-.css">
+    <link rel="stylesheet" href="assets/css/css/Phone-no-graphics-only-CSS.css">
+    <link rel="stylesheet" href="assets/css/css/Pricing-Yearly--Monthly-badges.css">
+    <link rel="stylesheet" href="assets/css/css/Video-Responsive.css">
+    <link rel="stylesheet" href="assets/css/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/fonts/line-awesome.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background:rgb(255,255,255);">
+        <div class="container-fluid"><span class="navbar-brand" style="font-size:25px;">FILLTECH-AI</span><style>
+    .nav-link {
+        transition: background-color 0.3s, color 0.3s;
+    }
+    .nav-link:hover {
+        background-color: black;
+        color: white;
+    }
+</style><button data-bs-toggle="collapse" data-bs-target="#navbarNav-1" class="navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav-2">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html" style="font-size:20px;">INICIO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="web.html" style="font-size:20px;">WEB</a></li>
+                    <li class="nav-item"><a class="nav-link" href="marketing.html" style="font-size:20px;">MARKETING</a></li>
+                    <li class="nav-item"><a class="nav-link" href="consultoria.html" style="font-size:20px;">CONSULTORÍA</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ai.html" style="font-size:20px;">IA</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div data-aos="fade-down" data-aos-duration="1500" data-aos-delay="200" id="hero-ia" class="hero" style="padding:100px 0;text-align:center;width:100%;height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;background:linear-gradient(#0d191e 57%, white), #f8f9fa;">
+        <h1 class="display-4 display-md-1" style="font-size:60px;color:rgb(255,255,255);">Inteligencia Artificial en tu Negocio</h1>
+        <p class="lead" style="color:rgb(0,227,9);font-size:26px;">Automatiza procesos y vende más gracias a la IA</p><a class="btn btn-primary btn-lg" role="button" href="#automate" style="border-color:rgb(0,0,0);background:rgb(255,255,255);color:rgb(0,0,0);" target="_parent">Descubre Más</a><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-chevron-down pulse animated infinite" style="padding-top:0px;padding-bottom:0px;margin-top:90px;font-size:50px;color:rgb(255,255,255);">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M6 9l6 6l6 -6"></path>
+        </svg>
+    </div><script>
+    async function sendMessage(event) {
+        event.preventDefault();
+        const input = document.getElementById('user-input');
+        const userMessage = input.value;
+
+        // Update chat box with user message
+        const chatBox = document.querySelector('.chat-box');
+        chatBox.innerHTML += `<div class="message user-message my-2"><div class="text-white bg-primary message-bubble p-2 rounded"><p>${userMessage}</p></div></div>`;
+        input.value = '';
+
+        const response = await fetch('/api/chat', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ messages: [{ content: userMessage }] }),
+        });
+
+        const data = await response.json();
+        const botMessage = data.message || 'Sorry, I could not understand that.';
+
+        // Update chat box with bot response
+        chatBox.innerHTML += `<div class="message bot-message my-2"><div class="text-dark bg-light message-bubble p-2 rounded"><p>${botMessage}</p></div></div>`;
+        chatBox.scrollTop = chatBox.scrollHeight; // Scroll to the bottom
+    }
+</script>
+    <div class="container py-4 py-xl-5" id="automate">
+        <div class="row mb-5">
+            <div class="col-md-8 col-xl-6 text-center mx-auto">
+                <h2 style="font-size:40px;">Automatiza con ayuda de la IA</h2>
+                <p class="w-lg-50" style="font-size:25px;">Realizamos integraciones de modelos de inteligencia artificial para casos de uso específicos</p>
+            </div>
+        </div>
+        <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body p-4" style="height:430px;border-radius:8px;background:#0d191d;">
+                        <div class="d-flex justify-content-center align-items-center mb-3 bs-icon-md bs-icon-rounded bs-icon-primary d-inline-block bs-icon" style="background:rgb(30,94,188);"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor">
+                                <path d="M0 0h24v24H0V0z" fill="none"></path>
+                                <path d="M15 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V7l-5-5zM6 20V4h8v4h4v12H6zm10-10v5c0 2.21-1.79 4-4 4s-4-1.79-4-4V8.5c0-1.47 1.26-2.64 2.76-2.49 1.3.13 2.24 1.32 2.24 2.63V15h-2V8.5c0-.28-.22-.5-.5-.5s-.5.22-.5.5V15c0 1.1.9 2 2 2s2-.9 2-2v-5h2z"></path>
+                            </svg></div>
+                        <h4 class="card-title" style="color:rgb(255,255,255);">Análisis de documentos</h4>
+                        <div class="alert alert-info" role="alert" style="text-align:justify;background:rgba(207,244,252,0);border-color:rgba(5,81,96,0);"><span style="color:rgb(224,224,224);font-size:20px;">Explora diversos modelos de lenguaje avanzados que podemos implementar para optimizar el procesamiento de documentos y mejorar la eficiencia en la gestión de información.</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body p-4" style="height:430px;border-radius:8px;background:#0d191d;">
+                        <div class="d-flex justify-content-center align-items-center mb-3 bs-icon-md bs-icon-rounded bs-icon-primary d-inline-block bs-icon" style="background:rgb(13,95,253);"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor">
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"></path>
+                            </svg></div>
+                        <h4 class="card-title" style="color:rgb(255,255,255);">Análisis de imagenes</h4>
+                        <div class="alert alert-info" role="alert" style="text-align:justify;background:rgba(207,244,252,0);border-color:rgba(5,81,96,0);"><span style="font-size:20px;color:rgb(217,217,217);">Explora diversos modelos de lenguaje avanzados que podemos implementar para optimizar el procesamiento de documentos y mejorar la eficiencia en la gestión de información.</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body p-4" style="height:430px;border-radius:8px;background:#0d191d;">
+                        <div class="d-flex justify-content-center align-items-center mb-3 bs-icon-md bs-icon-rounded bs-icon-primary d-inline-block bs-icon" style="background:rgb(35,170,179);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-robot">
+                                <path d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5M3 8.062C3 6.76 4.235 5.765 5.53 5.886a26.58 26.58 0 0 0 4.94 0C11.765 5.765 13 6.76 13 8.062v1.157a.933.933 0 0 1-.765.935c-.845.147-2.34.346-4.235.346-1.895 0-3.39-.2-4.235-.346A.933.933 0 0 1 3 9.219zm4.542-.827a.25.25 0 0 0-.217.068l-.92.9a24.767 24.767 0 0 1-1.871-.183.25.25 0 0 0-.068.495c.55.076 1.232.149 2.02.193a.25.25 0 0 0 .189-.071l.754-.736.847 1.71a.25.25 0 0 0 .404.062l.932-.97a25.286 25.286 0 0 0 1.922-.188.25.25 0 0 0-.068-.495c-.538.074-1.207.145-1.98.189a.25.25 0 0 0-.166.076l-.754.785-.842-1.7a.25.25 0 0 0-.182-.135Z"></path>
+                                <path d="M8.5 1.866a1 1 0 1 0-1 0V3h-2A4.5 4.5 0 0 0 1 7.5V8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1v-.5A4.5 4.5 0 0 0 10.5 3h-2zM14 7.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.5A3.5 3.5 0 0 1 5.5 4h5A3.5 3.5 0 0 1 14 7.5"></path>
+                            </svg></div>
+                        <h4 class="card-title" style="color:rgb(255,255,255);">Chatbots</h4>
+                        <div class="alert alert-info" role="alert" style="background:rgba(207,244,252,0);border-color:rgba(5,81,96,0);">
+                            <h4 class="alert-heading"></h4>
+                            <p style="text-align:justify;font-size:20px;color:rgb(214,214,214);">Mejora la interacción con tus clientes a través de chatbots para sitios web, Instagram, Messenger y WhatsApp, ofreciendo un servicio ágil y eficiente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 style="text-align:center;padding-top:10%;padding-bottom:10%;font-size:40px;">Chatbots con Inteligencia Artificial</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container py-4 py-xl-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="iphone-mockup"><img class="device" src="assets/img/iphone.svg">
+                    <div class="screen"></div>
+                </div>
+            </div>
+            <div class="col-md-6 pt-5 pt-lg-0">
+                <div style="margin-bottom:20%;">
+                    <h4 style="text-align:center;">Vende en línea de manera rápida y efectiva</h4>
+                    <p style="text-align:center;">Creamos chatbots totalmente personalizados, diseñados para incorporar toda la información de tu negocio y maximizar la experiencia de tus clientes.</p>
+                    <hr class="my-5">
+                </div>
+                <div style="margin-bottom:20%;">
+                    <h4 style="text-align:center;">Agenda citas, Envía fotos, enlaces y documentos</h4>
+                    <p style="text-align:center;">Tu próximo chatbot será capaz de hacer todo esto y mucho más, llevándote a mejorar la atención al cliente, los tiempos de respuesta y la automatización de procesos.</p>
+                    <hr class="my-5">
+                </div>
+                <div style="margin-bottom:10%;">
+                    <h4 style="text-align:center;">Usa tu mismo número sin riesgo</h4>
+                    <p>Utilizamos la API oficial de Meta para ofrecerte un servicio de chatbots seguro y confiable, garantizando la protección de tu cuenta y mejorando la experiencia de tus usuarios.</p>
+                    <hr class="my-5">
+                </div>
+                <div style="padding-bottom:0px;margin-bottom:10%;">
+                    <h4 style="text-align:center;">Visualiza los mensajes</h4>
+                    <p>Monitorea las conversaciones en tiempo real y mantente siempre un paso adelante.</p>
+                    <hr class="my-5">
+                </div>
+                <div>
+                    <h4>Soporte Incluido</h4>
+                    <p>Nuestros planes incluyen soporte técnico ilimitado, garantizando que siempre tendrás ayuda experta mientras tu suscripción esté activa.</p>
+                </div>
+                <hr class="my-5">
+            </div>
+        </div>
+    </div>
+    <section class="py-4 py-xl-5" style="text-align:center;margin-bottom:10%;">
+        <h1 style="margin-bottom:5%;">Multiples Plataformas Disponibles</h1>
+        <div class="container" style="text-align:center;">
+            <div class="row">
+                <div class="col" style="width:30%;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-whatsapp" style="font-size:60px;">
+                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
+                    </svg></div>
+                <div class="col" style="width:30%;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-telegram" style="font-size:60px;">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"></path>
+                    </svg></div>
+                <div class="col" style="width:30%;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-messenger" style="font-size:60px;">
+                        <path d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.639.639 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.639.639 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76m5.546-1.459-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z"></path>
+                    </svg></div>
+                <div class="col" style="width:30%;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-instagram" style="font-size:60px;">
+                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"></path>
+                    </svg></div>
+            </div>
+        </div>
+    </section>
+    <div class="container py-4 py-xl-5" style="text-align:center;">
+        <div class="row mb-5">
+            <div class="col-md-8 col-xl-6 text-center mx-auto">
+                <h2>Nuestros Planes</h2>
+                <p class="w-lg-50" style="font-size:20px;">Puedes solicitar un plan personalizado hecho para tu caso de uso especifico</p>
+            </div>
+        </div><a class="btn btn-primary ps-4 pe-4 pt-2 pb-2" role="button" href="https://wa.me/527297598371?text=Me%20interesa%20cotizar%20un%20chatbot" style="background:rgb(14,173,0);border-color:rgb(255,255,255);font-size:20px;"><svg class="icon icon-tabler icon-tabler-brand-whatsapp" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewbox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="padding-left:0px;padding-right:0px;font-size:20px;margin-bottom:4px;margin-right:7px;"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"></path><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"></path></svg>CONTACTO</a>
+        <div>
+            <ul class="nav nav-pills d-flex justify-content-center" role="tablist"></ul>
+            <div class="tab-content pt-5">
+                <div class="tab-pane" role="tabpanel" id="tab-2">
+                    <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+                        <div class="col">
+                            <div class="card h-100">
+                                <div class="card-body flex-grow-0 p-4"><span class="badge bg-primary text-uppercase mb-2">Básico</span>
+                                    <h4 class="display-4 fw-bold card-title">$430<span class="fs-3 fw-normal text-muted">mxn/mes</span></h4>
+                                </div>
+                                <div class="card-footer d-flex flex-column flex-grow-1 justify-content-between p-4">
+                                    <div>
+                                        <ul class="list-unstyled">
+                                            <li class="d-flex mb-2"><span class="me-2 bs-icon-xs bs-icon-rounded bs-icon-primary-light bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewbox="0 0 16 16" class="bi bi-check-lg"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022"></path></svg></span><span>Entrenamiento personalizado</span></li>
+                                            <li class="d-flex mb-2"><span class="me-2 bs-icon-xs bs-icon-rounded bs-icon-primary-light bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewbox="0 0 16 16" class="bi bi-check-lg"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022"></path></svg></span><span>Hasta 100 conversaciones al mes</span></li>
+                                            <li class="d-flex mb-2"><span class="me-2 bs-icon-xs bs-icon-rounded bs-icon-primary-light bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewbox="0 0 16 16" class="bi bi-check-lg"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022"></path></svg></span><span>Modelo básico de IA</span></li>
+                                        </ul>
+                                    </div><button class="btn btn-primary d-block w-100" type="button">Solicitar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <div class="card-body flex-grow-0 p-4"><span class="badge bg-primary text-uppercase mb-2">Pro</span>
+                                    <h4 class="display-4 fw-bold card-title">$640<span class="fs-3 fw-normal text-muted">mxn/mes</span></h4>
+                                </div>
+                                <div class="card-footer d-flex flex-column flex-grow-1 justify-content-between p-4">
+                                    <div>
+                                        <ul class="list-unstyled">
+                                            <li class="d-flex mb-2"><span class="me-2 bs-icon-xs bs-icon-rounded bs-icon-primary-light bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewbox="0 0 16 16" class="bi bi-check-lg"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022"></path></svg></span><span>Entrenamiento Personalizado</span></li>
+                                            <li class="d-flex mb-2"><span class="me-2 bs-icon-xs bs-icon-rounded bs-icon-primary-light bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewbox="0 0 16 16" class="bi bi-check-lg"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022"></path></svg></span><span>Soporte Técnico Prioritario</span></li>
+                                            <li class="d-flex mb-2"><span class="me-2 bs-icon-xs bs-icon-rounded bs-icon-primary-light bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewbox="0 0 16 16" class="bi bi-check-lg"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022"></path></svg></span><span>Multiples modelos de IA</span></li>
+                                            <li class="d-flex mb-2"><span class="me-2 bs-icon-xs bs-icon-rounded bs-icon-primary-light bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewbox="0 0 16 16" class="bi bi-check-lg"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022"></path></svg></span><span>Hasta 250 conversaciones</span></li>
+                                            <li class="d-flex mb-2"><span class="me-2 bs-icon-xs bs-icon-rounded bs-icon-primary-light bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewbox="0 0 16 16" class="bi bi-check-lg"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022"></path></svg></span><span>Envía imágenes y documentos</span></li>
+                                        </ul>
+                                    </div><button class="btn btn-primary d-block w-100" type="button">Solicitar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <div class="card-body flex-grow-0 p-4"><span class="badge bg-primary text-uppercase mb-2">Empresarial</span>
+                                    <h4 class="display-4 fw-bold card-title">$1290<span class="fs-3 fw-normal text-muted">mxn/mes</span></h4>
+                                </div>
+                                <div class="card-footer d-flex flex-column flex-grow-1 justify-content-between p-4">
+                                    <div>
+                                        <ul class="list-unstyled">
+                                            <li class="d-flex mb-2"><span class="me-2 bs-icon-xs bs-icon-rounded bs-icon-primary-light bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewbox="0 0 16 16" class="bi bi-check-lg"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022"></path></svg></span><span>Agenda citas o reuniones</span></li>
+                                            <li class="d-flex mb-2"><span class="me-2 bs-icon-xs bs-icon-rounded bs-icon-primary-light bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewbox="0 0 16 16" class="bi bi-check-lg"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022"></path></svg></span><span>Soporte Técnico Prioritario</span></li>
+                                            <li class="d-flex mb-2"><span class="me-2 bs-icon-xs bs-icon-rounded bs-icon-primary-light bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewbox="0 0 16 16" class="bi bi-check-lg"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022"></path></svg></span><span>+600 conversaciones mensuales</span></li>
+                                            <li class="d-flex mb-2"><span class="me-2 bs-icon-xs bs-icon-rounded bs-icon-primary-light bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewbox="0 0 16 16" class="bi bi-check-lg"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022"></path></svg></span><span>Agenda Citas</span></li>
+                                            <li class="d-flex mb-2"><span class="me-2 bs-icon-xs bs-icon-rounded bs-icon-primary-light bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewbox="0 0 16 16" class="bi bi-check-lg"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022"></path></svg></span><span>Interacción directa con API de Meta</span></li>
+                                        </ul>
+                                    </div><button class="btn btn-primary d-block w-100" type="button">Solicitar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center"><script>
+ window.difyChatbotConfig = {
+  token: '6OJrvfCBCFhD2AdA'
+ }
+</script><script src="https://udify.app/embed.min.js" id="6OJrvfCBCFhD2AdA" defer="">
+</script><style>
+  #dify-chatbot-bubble-button {
+    background-color: #1C64F2 !important;
+  }
+  #dify-chatbot-bubble-window {
+    width: 24rem !important;
+    height: 40rem !important;
+  }
+</style>
+        <div class="container text-muted py-4 py-lg-5" style="text-align:center;">
+            <ul class="list-inline">
+                <li class="list-inline-item me-4 list-inline-item list-inline-item list-inline-item list-inline-item"><a class="link-secondary" href="web.html">Web</a></li>
+                <li class="list-inline-item me-4 list-inline-item list-inline-item list-inline-item list-inline-item"><a class="link-secondary" href="marketing.html">Marketing</a></li>
+                <li class="list-inline-item me-4 list-inline-item list-inline-item list-inline-item list-inline-item"><a class="link-secondary" href="ai.html">IA</a></li>
+                <li class="list-inline-item list-inline-item list-inline-item list-inline-item list-inline-item"><a class="link-secondary" href="consultoría.html">Consultoría</a></li>
+            </ul>
+            <p class="mb-0">Copyright © 2024 FILLTECH-AI</p>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/aos.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/js/aos.min.js"></script>
+    <script src="assets/js/js/bs-init.js"></script>
+    <script src="assets/js/js/index.js"></script>
+    <script src="assets/js/js/online-chatbot.js"></script>
+    <script src="assets/js/js/calculator.js"></script>
+</body>
+
+</html>
